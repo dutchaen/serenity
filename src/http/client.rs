@@ -172,7 +172,7 @@ impl HttpBuilder {
 }
 
 fn parse_token(token: impl AsRef<str>) -> String {
-    return token.to_string();
+    return token.as_ref().trim().to_string();
 }
 
 fn reason_into_header(reason: &str) -> Headers {
